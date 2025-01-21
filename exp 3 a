@@ -1,0 +1,28 @@
+#include <sys/types.h>
+#include <unistd.h>
+#include <sys/wait.h>
+#include <stdlib.h>
+#include <stdio.h>
+void main()
+{
+pid_t childid=fork();
+if(childid==0)
+{
+ printf("I am the Child & Child creation is successfully completed \n");
+ printf("parent id %d\n",getppid());
+ printf("Child id %d\n",getpid());
+ }
+ if(childid>0)
+{
+ printf("I am the Parent & Child creation is successfully completed \n");
+ printf("The Parent process id %d\n",getppid());
+ printf("The child process id %d\n",getpid());
+ wait(NULL);
+ printf("Child process is terminated and parent process is running\n");
+ }
+if(childid<0)
+{
+printf("In fork(); Child creation is unsucessfull");
+}
+exit(0);
+}
