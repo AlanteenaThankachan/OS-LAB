@@ -1,0 +1,27 @@
+echo " Enter 1 to addition , 2 to multiplication,3 to substract ,4 to division"
+read ch
+echo " Enter the 1st number"
+read a
+echo "Enter the 2nd number"
+read b
+case $ch in
+1)
+result=$(($a+$b))
+echo "Result=" $result
+;;
+2)
+result=$(($a*$b))
+echo "Result=" $result
+;;
+3)
+result=$(($a-$b))
+echo "Result=" $result
+;;
+4)
+result=$(($a/$b))
+echo "Result=" $result
+;;
+*)
+echo"Invalid choice"
+;;
+esac
