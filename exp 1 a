@@ -1,0 +1,16 @@
+echo "Enter your name"
+read name
+echo "Enter your Sem"
+read sem
+echo "Enter your Batch"
+read batch
+echo "Enter your Roll no:"
+read rollno
+echo "Enter your Reg no:"
+read regno
+
+echo "Name=" $name
+echo "Sem=" $sem
+echo "Batch=" $batch
+echo "Rollno=" $rollno
+echo " Reg no=" $regno
