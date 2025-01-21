@@ -1,0 +1,10 @@
+echo "Enter your 1st number"
+read m
+echo "Enter your 2nd number"
+read n
+if (($m>$n))
+then
+echo "$m  is larger"
+else
+echo " $n  is larger"
+fi
